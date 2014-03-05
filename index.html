@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Lab7 Intro to jQuery</title>
+<style>
+	.good {color:green;}
+	section {position: relative; top:-300px;}
+	h2{text-align:center;}
+</style>
+</head>
+
+<body>
+	<div id="wrapper">
+    	<h2>Lab7</h2>
+        <section>
+        	<h3>Section 1</h3>
+            <p> Set in the 24th century, the game follows a faction of humans who colonize the Alpha Centauri star system to escape from a totalitarian Earth government. The player assumes the role of Nikola ap Io, the leader of an Alpha Centauri military unit, and undertakes missions against pirates and the Hegemony.</p>
+            
+            <p> Set in the 24th century, the game follows a faction of humans who colonize the Alpha Centauri star system to escape from a totalitarian Earth government. The player assumes the role of Nikola ap Io, the leader of an Alpha Centauri military unit, and undertakes missions against pirates and the Hegemony.</p>
+            
+            <p> Set in the 24th century, the game follows a faction of humans who colonize the Alpha Centauri star system to escape from a totalitarian Earth government. The player assumes the role of Nikola ap Io, the leader of an Alpha Centauri military unit, and undertakes missions against pirates and the Hegemony.</p>
+
+<p> Set in the 24th century, the game follows a faction of humans who colonize the Alpha Centauri star system to escape from a totalitarian Earth government. The player assumes the role of Nikola ap Io, the leader of an Alpha Centauri military unit, and undertakes missions against pirates and the Hegemony.</p>
+
+<p> Set in the 24th century, the game follows a faction of humans who colonize the Alpha Centauri star system to escape from a totalitarian Earth government. The player assumes the role of Nikola ap Io, the leader of an Alpha Centauri military unit, and undertakes missions against pirates and the Hegemony.</p>
+        </section>
+    
+    </div>
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+     <script src="jquery.transit.min.js"></script>
+	 <script>
+	 	$(document).ready(function(){
+			
+			$('section p:last').text('Welcome Troy! Hover here.');
+			
+			//same as using style attr
+			$('section p:first').css('color', 'red'); 
+			$('section p:last').addClass('good');
+			
+			$('section').hover( handlerIn, handlerOut )
+			
+			function handlerIn(e)
+			{
+				$(this).transition({y:'200px'});
+			}
+			
+			function handlerOut(e)
+			{
+				$(this).transition({y:'0px'});
+				$(this).clearQueue();
+			}
+		});
+	 </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
